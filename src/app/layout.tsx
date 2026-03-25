@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import NavbarClient from "./_components/NavbarClient";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -37,26 +38,7 @@ export default function RootLayout({
             >
               🎵 Lyrics Finder
             </Link>
-            <div className="flex items-center gap-4 text-sm font-medium text-gray-600">
-              <Link href="/search" className="hover:text-indigo-600 transition-colors">
-                Search
-              </Link>
-              <Link href="/add" className="hover:text-indigo-600 transition-colors">
-                Add Song
-              </Link>
-              <Link
-                href="/login"
-                className="px-3 py-1.5 rounded-md border border-gray-300 hover:border-indigo-400 hover:text-indigo-600 transition-colors"
-              >
-                Login
-              </Link>
-              <Link
-                href="/signup"
-                className="px-3 py-1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
-              >
-                Sign Up
-              </Link>
-            </div>
+            <NavbarClient />
           </div>
         </nav>
 
@@ -68,4 +50,3 @@ export default function RootLayout({
     </html>
   );
 }
-
